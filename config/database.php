@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 
 
-$DATABASE_URL = parse_url(getenv("DATABASE_URL"));
+// $DATABASE_URL = parse_url(getenv("DATABASE_URL"));
 
 return [
 
@@ -68,11 +68,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => $DATABASE_URL["ec2-54-243-44-102.compute-1.amazonaws.com"],
-            'port' => $DATABASE_URL["5432"],
-            'database' => ltrim($DATABASE_URL["d3hc5di4h7b3aa"], "/"),
-            'username' => $DATABASE_URL["nzralqrvbfkhjt"],
-            'password' => $DATABASE_URL["1a2cfd0bb1744fdfbb013f569f5abc272ccc02b3996975581fba799997e54adf"],
+            'host' => "ec2-54-243-44-102.compute-1.amazonaws.com",
+            'port' => "5432",
+            'database' => ltrim("d3hc5di4h7b3aa", "/"),
+            'username' => "nzralqrvbfkhjt",
+            'password' => "1a2cfd0bb1744fdfbb013f569f5abc272ccc02b3996975581fba799997e54adf",
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
