@@ -33,7 +33,7 @@
             @foreach($user->posts as $post)
                 <div class="col-4 pb-4">
                     <a href="/p/{{ $post->id }}">
-                        <img src="{{ URL::to('/')}}/images/uploads/{{ $post->image }}" class="w-100"/>
+                        <img src="{{ URL::to('/')}}''{{ $post->image }}" class="w-100"/>
                     </a>
                 </div>
             @endforeach
