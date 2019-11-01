@@ -40,10 +40,10 @@ class PostsController extends Controller
             'image' => ['required', 'image'],
         ]);
 
-        $imagePath = request('image')->move('uploads','public');
+        $imagePath = request('image')->move('/images/uploads');
         
-        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
-        $image->save();
+        // $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
+        // $image->save();
 
         auth()->user()->posts()->create([
             'caption' => $data['caption'],
