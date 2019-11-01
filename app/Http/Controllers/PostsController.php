@@ -40,7 +40,7 @@ class PostsController extends Controller
             'image' => ['required', 'image'],
         ]);
 
-        $imagePath = request('image')->store('uploads','public');
+        $imagePath = request('image')->move('uploads','public');
         
         $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
         $image->save();
