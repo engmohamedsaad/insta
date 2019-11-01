@@ -69,11 +69,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => '',
-            'host' => 'sql204.epizy.com',
+            'host' => 'remotemysql.com',
             'port' => '3306',
-            'database' => 'epiz_24715438_insta',
-            'username' => 'epiz_24715438',
-            'password' => 'Mohamed@1234',
+            'database' => 'tIOaE5MdbN',
+            'username' => 'tIOaE5MdbN',
+            'password' => 'jc87zrXrW7',
             'unix_socket' => '',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -81,9 +81,7 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
+            'options' => [],
         ],
 
         'pgsql' => [
