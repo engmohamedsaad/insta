@@ -13,6 +13,14 @@ class PostsController extends Controller
         $this->middleware("auth");
     }
 
+
+    public function mistka(){
+       if(auth()->user()->following->count() > 0 ) {
+           return $this->index();}else{
+               return view('welcome');
+           };
+    }
+
     public function index()
     {
         $users = auth()->user()->following()->pluck('profiles.user_id');
