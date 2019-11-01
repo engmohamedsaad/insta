@@ -10,7 +10,7 @@ class Profile extends Model
 
     public function profileImage()
     {
-        $imagePath = ($this->image) ? $this->image : '/uploads/profileimage/lmWG3UlwzLn7jIkCpWjRIDlxIcnwn7taaCyOIY1z.png';
+        $imagePath = ($this->image) ? $this->image : '/images/profileimage/lmWG3UlwzLn7jIkCpWjRIDlxIcnwn7taaCyOIY1z.png';
         return '/storage/' . $imagePath;
     }
 
